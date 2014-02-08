@@ -1,0 +1,15 @@
+<div>
+  <p>A Simple Static Tree.
+  <h4>Tree</h4>
+
+  <ul>
+    <li sf-treepeat="node in children of treeData">
+      {{node.name}}
+      <ul>
+        <li sf-treecurse>This should be removed</li>
+      </ul>
+    </li>
+  </ul>
+
+</div>
+
