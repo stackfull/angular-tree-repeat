@@ -8,7 +8,7 @@ About
 
 Adds a pair of directives that can be used to display recursive (tree) data.
 
-See http://blog.stackfull.com/ for the back story.
+See http://blog.stackfull.com/2014/02/trees-in-angularjs/ for the back story.
 
 Usage
 -----
