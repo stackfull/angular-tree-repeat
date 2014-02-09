@@ -6,7 +6,9 @@ Source for the sf.treeRepeat module for AngularJS
 About
 -----
 
-Work in progress...
+Adds a pair of directives that can be used to display recursive (tree) data.
+
+See http://blog.stackfull.com/ for the back story.
 
 Usage
 -----
@@ -17,7 +19,16 @@ included as a dependency:
 
     angular.module('myModule', ['sf.treeRepeat']);
 
-Then use the directive `sf-tree-repeat` TODO: write this
+Then use the directive `sf-treepeat` and `sf-treecurse` as follows:
+
+    <ul>
+      <li sf-treepeat="node in children of treeData">
+        {{node.name}}
+        <ul>
+          <li sf-treecurse></li>
+        </ul>
+      </li>
+    </ul>
 
 Check out the examples in the demo folder for all the details.
 
@@ -61,6 +72,6 @@ All comments to <paul@stackfull.com>
 ChangeLog
 ---------
 
-### 0.0.0 (08 Feb 2014)
+### 0.0.0 (09 Feb 2014)
 Prototype
 
