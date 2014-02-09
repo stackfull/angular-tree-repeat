@@ -9,7 +9,7 @@
   // (part of the sf.treeRepeat module).
   var mod = angular.module('sf.treeRepeat');
 
-  // Utilitye to turn the expression supplied to the directive:
+  // Utility to turn the expression supplied to the directive:
   //
   //     a in b of c
   //
@@ -67,7 +67,7 @@
 
   // The `sf-treecurse` directive is a little like `ng-transclude` in that it
   // signals where to insert our recursive template
-  mod.directive('sfTreecurse', ['$log', '$compile', function($log, $compile){
+  mod.directive('sfTreecurse', ['$compile', function($compile){
     return {
       // which must come from a parent `sf-treepeat`.
       require: "^sfTreepeat",

@@ -1,0 +1,16 @@
+<div>
+  <p>A Zippable Tree.
+  <h4>Zippy Tree</h4>
+
+  <ul>
+    <li sf-treepeat="node in children of treeData">
+      <zippy title="{{node.name}}">
+        <ul>
+          <li sf-treecurse>This should be removed</li>
+        </ul>
+      </zippy>
+    </li>
+  </ul>
+
+</div>
+

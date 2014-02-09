@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('treeRepeatApp').controller('TableCtrl', function TableCtrl($scope) {
+  angular.module('treeRepeatApp').controller('ZippyCtrl', function ZippyCtrl($scope) {
     $scope.treeData = {
       name: "Root",
       children: [{
