@@ -71,24 +71,24 @@
     return {
       // which must come from a parent `sf-treepeat`.
       require: "^sfTreepeat",
-      link: function sfTreecursePostLink(scope, iterStartElement, attrs, controller) {
+      link: function sfTreecursePostLink(scope, iterStartElementJqLiteOrJquery, attrs, controller) {
         // Now we stitch together an element containing a vanila repeater using
         // the values from the controller.
+        var iterStartElementDOM = iterStartElementJqLiteOrJquery[0];
         var build = [
-          '<', iterStartElement.context.tagName, ' ng-repeat="',
+          '<', iterStartElementDOM.tagName, ' ng-repeat="',
           controller.ident.value, ' in ',
           controller.ident.value, '.', controller.ident.collection,
           '">',
           controller.template,
-          '</', iterStartElement.context.tagName, '>'];
+          '</', iterStartElementDOM.tagName, '>'];
         var el = angular.element(build.join(''));
         // We swap out the element for our new one and tell angular to do its
         // thing with that.
-        iterStartElement.replaceWith(el);
+        iterStartElementJqLiteOrJquery.replaceWith(el);
         $compile(el)(scope);
       }
     };
   }]);
 
 }());
-
